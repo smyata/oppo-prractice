@@ -104,10 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\user\googletest\googletest\src;C:\Users\user\googletest\googletest\include;C:\Users\user\googletest\build\lib\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\user\googletest\googletest\src;C:\Users\user\googletest\googletest\include;C:\Users\user\googletest\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C:\Users\user\googletest\build\lib\Debug\gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -132,7 +136,10 @@
     <ClCompile Include="Income.cpp" />
     <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="SourseTest.cpp" />
     <ClCompile Include="Sum.cpp" />
+    <ClCompile Include="DateValidatorTest.cpp" />
+    <ClCompile Include="SumTest.cpp" />
     <ClCompile Include="Tokenizer.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -10,5 +10,5 @@ void PrintIncomeInfo(const std::vector<std::string>& tokens, const Income& incom
     std::cout << "Детали:" << std::endl;
     std::cout << DateToken(tokens) << std::endl;
     std::cout << SourceToken(tokens) << std::endl;
-    std::cout << SumToken(tokens) << std::endl;
+    std::cout << IsValidSum(tokens) << std::endl;
 }

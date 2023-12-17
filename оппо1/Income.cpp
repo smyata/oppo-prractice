@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -9,10 +10,18 @@
 #include "Source.h"
 #include "Sum.h"
 #include "Printer.h"
+#include <gtest/gtest.h>
 
-int main() {
+int main(int argc, char** argv){
+
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
+
+	// Инициализация Google Test и запуск тестов
+	::testing::InitGoogleTest(&argc, argv);
+	//::testing::GTEST_FLAG(filter) = "SourseTest";
+	int testResult = RUN_ALL_TESTS();
+	
 	std::cout << "Введите информацию: ";
 	std::string input;
 	std::getline(std::cin, input);
