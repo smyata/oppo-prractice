@@ -127,7 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Date.cpp" />
+    <ClCompile Include="DateValidator.cpp" />
     <ClCompile Include="Income.cpp" />
+    <ClCompile Include="Printer.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Sum.cpp" />
+    <ClCompile Include="Tokenizer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="DateValidator.h" />
+    <ClInclude Include="Printer.h" />
+    <ClInclude Include="Source.h" />
+    <ClInclude Include="Sum.h" />
+    <ClInclude Include="Tokenizer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
