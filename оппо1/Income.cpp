@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -21,10 +22,20 @@ int main(int argc, char** argv){
 	::testing::InitGoogleTest(&argc, argv);
 	//::testing::GTEST_FLAG(filter) = "SourseTest";
 	int testResult = RUN_ALL_TESTS();
-	
-	std::cout << "Введите информацию: ";
+
+	std::ifstream inputFile("C:\\Users\\user\\source\\repos\\оппо1\\input.txt");
+	if (!inputFile.is_open()) {
+		std::cerr << "Ошибка открытия файла." << std::endl;
+		return 1;
+	}
+	std::cout << "Чтение из файла.." << std::endl;
 	std::string input;
-	std::getline(std::cin, input);
+	std::getline(inputFile, input);
+	inputFile.close(); 
+	
+	//std::cout << "Введите информацию: ";
+	//std::string input;
+	//std::getline(std::cin, input);
 	std::vector<std::string> tokens = TokenizeInput(input, " ");
 
 	if (tokens.size() > 0 && tokens[0] == "доходы") {
